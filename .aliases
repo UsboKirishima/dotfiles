@@ -4,7 +4,7 @@
 
 alias cls='clear'
 alias vol='cd /run/media/Volume'
-
+alias gh='echo'
 
 cleanup() {
         sudo pacman -Scc

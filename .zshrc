@@ -2,19 +2,22 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
 
+# Prompts
+autoload -U colors && colors
+PS1="%{%B${fg[yellow]}%}%1~ %{${fg[red]}%}%(?..[%?])%{${fg[default]}%}%B>%b "
+PS2='%_> '
 
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
+#[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+#source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 #
 # Executes commands at the start of an interactive session.
 #
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
+setopt autocd nomatch appendhistory incappendhistory sharehistory histignoredups histreduceblanks nohistbeep completealiases nobeep noextendedglob nonotify nomultios correct
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
@@ -30,3 +33,6 @@ export DEVKITPRO=/opt/devkitpro
 export DEVKITARM=/opt/devkitpro/devkitARM
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+#source /home/usbo/Downloads/zsh-syntax-highlighting/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
