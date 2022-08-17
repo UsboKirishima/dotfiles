@@ -4,7 +4,7 @@
 # screenshots
 
 
-![one](https://ibb.co/z2HFJTg)
+![one](https://i.ibb.co/YdTXZFS/unknown-64.png)
 
 
 ![two](https://ibb.co/dg7mg6f)
